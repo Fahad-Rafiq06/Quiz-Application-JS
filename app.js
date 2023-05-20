@@ -28,13 +28,35 @@ var questions = [
     }
 ]
 
+var question = document.getElementById("question");
+var optionElement = document.getElementsByClassName("option-element");
+
 function showquestions(){
-    var question = document.getElementById("question");
+
+    // target id from html
+    
+    
+    // adding object value in the targetted html element
     question.innerHTML = questions[0].question;
-    var optionElement = document.getElementsByClassName("option-element");
+
+    // using loop to show multiple options in the document from the object
     for (var i = 0; i < optionElement.length; i++){
     
     optionElement[i].innerHTML = questions[0].options[i];
     // console.log(questions[0].options[2])
     }
+}
+
+var questioncount = 0;
+
+function nextq (){
+    questioncount++;
+    question.innerHTML = questions[questioncount].question;
+    for (var i = 0; i < optionElement.length; i++){
+    
+        optionElement[i].innerHTML = questions[questioncount].options[i];
+        // console.log(questions[0].options[2])
+        }
+
+    console.log(questioncount)
 }
