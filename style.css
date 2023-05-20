@@ -1,0 +1,7 @@
+.card-text:hover{
+    background-color: rgb(55, 103, 246);
+    color: white;
+    padding: 3px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
